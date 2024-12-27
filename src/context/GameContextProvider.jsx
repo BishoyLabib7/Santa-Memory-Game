@@ -111,7 +111,7 @@ const GameContextProvider = ({ children }) => {
 
             //score based on the remaining time
           }
-          setScore(newMatchedPairs.length * 10 + timeLeft);
+          setScore(newMatchedPairs.length * 10);
         } else {
           setTimeout(() => {
             const resetCards = [...updatedCards];
@@ -131,6 +131,9 @@ const GameContextProvider = ({ children }) => {
   // Function to restart the game
   const restartGame = () => {
     setRestart(new Date());
+
+    setFlippedCards([]);
+    setMatchedPairs([]); 
 
     setShowIcons(true);
     clearInterval(timerRef.current);
