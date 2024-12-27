@@ -1,16 +1,14 @@
-// import bell from "../assets/images/icons/bell.png";
 import { useContext } from "react";
-import "./responsive.css";
-import "./IconCard.css";
 import { GameContext } from "../context/GameContextProvider";
+import "./IconCard.css";
 
-function IconCard({ cardId }) {
+const IconCard = ({ iconId }) => {
   const { cards, flipCard, showIcons } = useContext(GameContext);
-  const currentCard = cards[cardId];
+  const card = cards[iconId];
 
   const handleClick = () => {
-    if (!currentCard.flipped && !showIcons) {
-      flipCard(cardId);
+    if (!card.flipped && !showIcons) {
+      flipCard(iconId);
     }
   };
   return (
@@ -20,18 +18,18 @@ function IconCard({ cardId }) {
     >
       <div
         className={`flip-card-inner ${
-          currentCard.flipped || showIcons ? "flip-card-flipped" : ""
+          card.flipped || showIcons ? "flip-card-flipped" : ""
         }`}
       >
         <div className="flip-card-front bg-white flex justify-center items-center rounded-full">
           <p className="text-3xl font-bold text-red-600">?</p>
         </div>
         <div className="flip-card-back bg-ball-background bg-center bg-cover flex justify-center items-center">
-          <img src={currentCard.icon} alt="" className=" w-14 object-cover" />
+          <img src={card.icon} alt={card.icon} className=" w-14 object-cover" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default IconCard;
