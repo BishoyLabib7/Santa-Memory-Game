@@ -14,7 +14,7 @@ function Sound() {
   });
 
   return (
-    <div className=" absolute right-[1rem] top-[4rem] flex flex-col items-start w-[3rem] xl:w-[5rem] z-50">
+    <div className=" absolute right-[1rem] top-[6rem] flex flex-col items-start w-[3rem] xl:w-[5rem] z-50">
       <audio src={christmas_sound} ref={audioEl}></audio>
       <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
     </div>
