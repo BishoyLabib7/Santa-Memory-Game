@@ -1,4 +1,13 @@
 /* Small devices (phones, up to 350px width) */
+@media (max-width: 350px) {
+  .gameboard {
+    top:22rem !important; 
+  }
+  .buttonmenu{
+    top:40rem !important
+  }
+}
+
 @media (min-width: 350px) {
   .gameboard {
     top:16rem !important; 
