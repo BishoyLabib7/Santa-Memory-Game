@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { GameContext } from "../context/GameContextProvider";
+import hoho from "../assets/Ho Ho Ho.mp3";
 import Confetti from "react-confetti";
 
 //import image
@@ -12,10 +13,18 @@ import christmas from "../assets/images/christmas.png";
 const Result = () => {
   const { gameOver, gameWon, restartGame, score } = useContext(GameContext);
 
+  const ref = useRef();
+
+  useEffect(() => {
+    if (gameWon) {
+      ref.current.play();
+    }
+  }, [ref, gameWon]);
+
   if (!gameOver && !gameWon) return null;
 
   return (
-    <div className=" absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-50 rounded-xl">
+    <div className=" absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-40 rounded-xl">
       <div className=" text-orange-300 mb-5">
         {gameOver ? (
           <div className="flex flex-col items-center">
@@ -27,7 +36,8 @@ const Result = () => {
             {gameWon ? (
               <div className="flex flex-col justify-center items-center">
                 <img src={christmas} alt="" className=" h-40" />
-                <p className="text-5xl md:text-7xl font-bold">You Win</p>
+                <audio ref={ref} src={hoho} autoPlay></audio>
+                <p className="text-5xl md:text-7xl font-Christmas">You Win</p>
                 <img src={winIcon} alt="" className=" h-56" />
               </div>
             ) : (
@@ -38,9 +48,8 @@ const Result = () => {
       </div>
       <div className=" flex items-center gap-3 mt-10">
         <img src={Score} alt="score" className=" w-10 h-10" />
-        <p className=" text-4xl uppercase font-bold text-white ">
-          Your Score :{" "}
-          <span className="text-green-500 text-5xl"> {score} </span>{" "}
+        <p className=" text-4xl uppercase font-bold text-white font-Christmas">
+          Score : <span className="text-green-500 text-5xl"> {score} </span>{" "}
         </p>
       </div>
 
