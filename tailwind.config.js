@@ -9,6 +9,9 @@ export default {
         "ball-background": "url(assets/images/ball-bg.png)",
         "button-background": "url(assets/images/button-bg.png)",
       },
+      fontFamily: {
+        Christmas: ["MountainsofChristmas-Bold", "Cursive"],
+      },
     },
   },
   plugins: [],
