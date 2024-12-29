@@ -107,10 +107,10 @@ const GameContextProvider = ({ children }) => {
             // Delay the game won UI display by 1 second
             setTimeout(() => {
               setGameWon(true);
+              setScore((s) => s + timeLeft / 2);
             }, 1000);
-
-            //score based on the remaining time
           }
+          //score based on the remaining time
           setScore(newMatchedPairs.length * 10);
         } else {
           setTimeout(() => {
@@ -133,7 +133,7 @@ const GameContextProvider = ({ children }) => {
     setRestart(new Date());
 
     setFlippedCards([]);
-    setMatchedPairs([]); 
+    setMatchedPairs([]);
 
     setShowIcons(true);
     clearInterval(timerRef.current);
