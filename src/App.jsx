@@ -19,11 +19,11 @@ function App() {
         <>
           <div className="relative flex justify-center items-center w-[36rem] h-[36rem] md:w-[40rem] md:h-[40rem] bg-gameboard-background bg-center bg-contain bg-no-repeat">
             <GameBoard />
+            <ButtonMenu />
           </div>
-          <ButtonMenu />
           <Result />
         </>
-      )}
+      )}{" "}
     </main>
   );
 }
