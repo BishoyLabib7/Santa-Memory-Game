@@ -8,7 +8,7 @@ function Header() {
     <div className="absolute top-0 text-red-200 my-4 font-Christmas flex tems-center justify-center">
       <h1 className="font-bold text-center text-3xl xl:text-7xl   ">
         {" "}
-        Merry Christams{" "}
+        Merry Christmas{" "}
         {name
           ? name
           : data.getMonth() === 11
