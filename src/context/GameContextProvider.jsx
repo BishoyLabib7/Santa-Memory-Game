@@ -59,18 +59,18 @@ const GameContextProvider = ({ children }) => {
       }, 3000);
     }
     // Timer logic to count down the remaining time
-    if (start) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft((prev) => {
-          if (prev <= 1) {
-            clearInterval(timerRef.current);
-            if (!gameWon) setGameOver(true); // Time up, game over
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
+    // if (start) {
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          if (!gameWon) setGameOver(true); // Time up, game over
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    // }
 
     if (gameWon) clearInterval(timerRef.current);
 
