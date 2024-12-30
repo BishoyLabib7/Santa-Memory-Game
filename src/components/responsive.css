@@ -1,59 +1,59 @@
 /* Small devices (phones, up to 350px width) */
 @media (max-width: 350px) {
   .gameboard {
-    top:22rem !important; 
+    top: 15rem !important;
   }
-  .buttonmenu{
-    top:32rem !important
+  .buttonmenu {
+    top: 32rem !important;
   }
 }
 
 @media (min-width: 350px) {
   .gameboard {
-    top:16rem !important; 
+    top: 16rem !important;
   }
-  .buttonmenu{
-    top:35rem !important
+  .buttonmenu {
+    top: 35rem !important;
   }
 }
 
 /*  devices (phones, up to 360px width) */
 @media (min-width: 360px) {
   .gameboard {
-    top:17rem !important; 
+    top: 17rem !important;
   }
-  .buttonmenu{
-    top:37rem !important
+  .buttonmenu {
+    top: 37rem !important;
   }
 }
 
 /* IPhone 12 */
 @media (min-width: 390px) {
   .gameboard {
-    top:20rem !important; 
+    top: 20rem !important;
   }
-  .buttonmenu{
-    top:40rem !important
+  .buttonmenu {
+    top: 40rem !important;
   }
 }
 
 /* Devices 410px */
 @media (min-width: 410px) {
   .gameboard {
-    top:22.5rem !important; 
+    top: 22.5rem !important;
   }
-  .buttonmenu{
-    top:43rem !important
+  .buttonmenu {
+    top: 43rem !important;
   }
 }
 
 /* IPhone 14 */
 @media (min-width: 430px) {
   .gameboard {
-    top:23rem !important; 
+    top: 23rem !important;
   }
-  .buttonmenu{
-    top:43rem !important
+  .buttonmenu {
+    top: 43rem !important;
   }
 }
 
@@ -62,9 +62,9 @@
   .gameboard {
     top: 25.5rem !important;
   }
-  .buttonmenu{
-    top:50rem !important;
-    right:15rem !important
+  .buttonmenu {
+    top: 50rem !important;
+    right: 15rem !important;
   }
 }
 
@@ -73,9 +73,9 @@
   .gameboard {
     top: 30rem !important;
   }
-  .buttonmenu{
-    top:55rem !important;
-    right:16rem !important
+  .buttonmenu {
+    top: 55rem !important;
+    right: 16rem !important;
   }
 }
 
@@ -84,9 +84,8 @@
   .gameboard {
     top: 15rem !important;
   }
-  .buttonmenu{
-    top:20rem !important;
-    right:13rem !important
+  .buttonmenu {
+    top: 20rem !important;
+    right: 13rem !important;
   }
 }
-
