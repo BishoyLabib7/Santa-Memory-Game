@@ -1,14 +1,14 @@
 import RestartBtn from "../assets/images/restart-btn.png";
 import ClockBtn from "../assets/images/clock.png";
 import { GameContext } from "../context/GameContextProvider";
-import "./responsive.css";
+// import "./responsive.css";
 import { useContext } from "react";
 
 const ButtonMenu = () => {
   const { timeLeft, restartGame } = useContext(GameContext);
 
   return (
-    <div className=" buttonmenu absolute md:right-[10rem] md:top-[20rem] flex flex-row lg:flex-col items-start w-[18rem]">
+    <div className="flex flex-row items-start justify-center mb-[-38rem] w-[25rem] sm:w-[30rem]">
       <div className="flex justify-center items-center gap-3 bg-button-background bg-center bg-contain bg-no-repeat w-full h-[5rem]">
         <img src={ClockBtn} alt="" className="h-6 lg:h-10" />
         <p className=" text-white md:text-lg font-bold">{timeLeft} secs</p>
