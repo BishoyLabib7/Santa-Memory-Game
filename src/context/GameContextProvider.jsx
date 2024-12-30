@@ -72,6 +72,8 @@ const GameContextProvider = ({ children }) => {
       }, 1000);
     }
 
+    if (gameWon) clearInterval(timerRef.current);
+
     // Clear interval on component unmount
     return () => clearInterval(timerRef.current);
   }, [gameWon, restart, start]);
@@ -108,7 +110,7 @@ const GameContextProvider = ({ children }) => {
             setTimeout(() => {
               setGameWon(true);
               setScore((s) => s + timeLeft / 2);
-            }, 1000);
+            }, 500);
           }
           //score based on the remaining time
           setScore(newMatchedPairs.length * 10);
