@@ -74,7 +74,7 @@
 
 <br/>
 
-## How It Works
+## How to Play
 
 🌟 Start the Game: Hit the Start button to shuffle the cards and begin.
 
